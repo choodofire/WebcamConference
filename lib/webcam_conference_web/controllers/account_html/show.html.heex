@@ -1,0 +1,16 @@
+<.header>
+  Account <%= @account.id %>
+  <:subtitle>This is a account record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/accounts/#{@account}/edit"}>
+      <.button>Edit account</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Email"><%= @account.email %></:item>
+  <:item title="Hash password"><%= @account.hash_password %></:item>
+</.list>
+
+<.back navigate={~p"/accounts"}>Back to accounts</.back>
